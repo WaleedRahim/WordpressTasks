@@ -16,7 +16,7 @@ get_header();?>
 while ( have_posts() ) :
 	the_post(); ?>
 
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-lg-6 col-md-6 col-sm-6 mt-5 ">
             <?php the_post_thumbnail( ) ?>
             </div>

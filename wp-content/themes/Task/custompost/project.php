@@ -55,21 +55,8 @@ function create_project_cpt() {
 
 
     );
-    register_post_type( 'project', $args );
 
-}
-
-
-
- // Add custom taxonomies to the Project
-
-
-function add_custom_taxonomies() {
-
-
-  // Add new "Project Type" taxonomy to Posts
-
-  register_taxonomy('projectkey', 'project', array(
+    register_taxonomy('projecttype', 'project', array(
    
     'hierarchical' => true,
    
@@ -88,13 +75,19 @@ function add_custom_taxonomies() {
     ),
     
     'rewrite' => array(
-      'slug' => 'Project Type', 
+      'slug' => 'Projecttypee', 
       'with_front' => false, 
       'hierarchical' => true 
     ),
   ));
+
+    register_post_type( 'project', $args );
+
 }
-add_action( 'init', 'add_custom_taxonomies', 0 );
+
+
+
+ 
 
 
 ?>
