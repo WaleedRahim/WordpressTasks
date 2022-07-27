@@ -30,7 +30,7 @@ register_rest_route( 'waled/', 'arcitecture', $args = array(
 function get_project_information(){
 
 	$details = [];
-	$articl_posts = get_terms( array(
+	$articl_posts = get_posts( array(
     // 'taxonomy' => 'projecttype',
     'hide_empty' => false,
     'post_type' => 'project',
@@ -41,11 +41,13 @@ foreach ($articl_posts as $post){
 
 $details[] = array(
 
-	'id' => $post->post_id,
-	'name' => $post->name
-
+	'id' => $post->ID,
+	'title' => $post->post_title,
+ 
 
 );
+
+
 
 }
 
