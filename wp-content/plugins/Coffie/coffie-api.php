@@ -12,8 +12,8 @@
 
 
 defined( 'ABSPATH' ) or die( 'Unauthorized Access' );
-add_shortcode('coffie_data', 'coffie_get_data');
-function coffie_get_data() {
+add_shortcode('coffie_data', 'hs_give_me_coffie');
+function hs_give_me_coffie() {
 
     $url = 'https://coffee.alexflipnote.dev/random.json';
     
